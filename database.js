@@ -2,11 +2,11 @@ const collinList = [{
     name: "Karsiyakali Necmi",
     addressone: "3449  Cottrill Lane",
     addresstwo: "3810  Courtright Street"
-},{
+}, {
     name: "Rejiko Obra",
     addressone: "3696  Oak Way",
     addresstwo: "2601  Cabell Avenue"
-},{
+}, {
     name: "Aynali Tahir",
     addressone: "3 Sidco Industrial Estate, Ambattur",
     addresstwo: "59, Dda Flat, Near Ncert, Aurbindo Place"

@@ -1,3 +1,4 @@
+//Bu fonksiyonumuz tablomuzun basligini olusturuyor
 function customerListHeader() {
     return `
     <table class="table w-50 p-3 mx-auto">
@@ -10,7 +11,7 @@ function customerListHeader() {
       </tr>
     </thead>`
 }
-
+//Bu fonksiyonumuz musteri listemizi olusturuyor
 function createCustomerList() {
     let fullList = customerList.map(function (plist, pindex) {
         return `<div class="w-50 p-3 mx-auto" " id="customer-list">
@@ -27,19 +28,21 @@ function createCustomerList() {
     return fullList
 }
 
-
+//BU fonksiyonumuz musteri listemizi Ui a yaziyor
 function printCustomerList(pmain) {
     pmain.innerHTML = customerListHeader();
     pmain.innerHTML += createCustomerList()
 
 }
-
+//Bu fonksiyonumuz butona tikladigimizda musteri listemize geri donuyor
 function backtoList() {
     let backButton = document.getElementById("back-list")
     backButton.addEventListener("click", function () {
         window.history.go(0)
     })
 }
+
+//Bu fonksiyonmuz ise kurbaninin isi bitirilip bitirilmedigini kontrol edip ona gore ismini silik gosteren fonksiyonumuz
 function checked(plist) {
     let checked = plist.map(function (plist, i) {
         document.getElementById(`checked-box${i}`).addEventListener("click", function (e) {
@@ -49,6 +52,8 @@ function checked(plist) {
         })
     })
 }
+
+//Bu fonksiyonumuz ilgili butona tikladigmizda musterimizin kurban listesini ui a yazdiriyor
 function addEvent() {
     let eventList = customerList.map(function (plist, pindex) {
         let clickedName = document.querySelector(`#show-list${pindex}`)
@@ -61,6 +66,7 @@ function addEvent() {
     })
 }
 
+//Bu fonksiyonumuz ise tablo basligimizi olusturuyor
 function createVictimsHeader() {
     return ` <tr class="table  w-50 p-3 mx-auto">
     <th>Victim</th>
@@ -68,11 +74,13 @@ function createVictimsHeader() {
     <th>Is He Died?</th>
 </tr>`
 }
-
+//Bu fonksiyonmuz geri donus butonumuzu olusturuyor
 function backHomeButton() {
     return `<button type="button" class="btn btn-outline-success" id="back-list">Back to Customer List</button>`
 }
 
+
+//Bu fonksiyonumuz ise kurban listemizi olusturan fonksiyonumuz
 function createVictimsPage(plist) {
 
     let victimlist = plist.map(function (plist, i) {
@@ -95,7 +103,7 @@ function createVictimsPage(plist) {
 
     return victimlist
 }
-
+//Bu fonksiyonlarimiz ise localstorage fonksiyonlarimiz
 function addLocal() {
     localStorage.setItem("person", JSON.stringify(customerList))
 }
